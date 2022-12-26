@@ -184,3 +184,17 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
+
+.form-item {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.formButton {
+  border-radius: 0.2em;
+  width: 100%;
+}
+
+.warning {
+  color: rgb(231, 7, 7);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}

@@ -25,7 +25,9 @@ https://templatemo.com/tm-531-reflux
   <link rel="stylesheet" href="assets/css/templatemo-style.css" />
   <link rel="stylesheet" href="assets/css/owl.css" />
   <link rel="stylesheet" href="assets/css/lightbox.css" />
-  <script src="https://kit.fontawesome.com/0b7fc6810b.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0b7fc6810b.js"
+    crossorigin="anonymous"></script>
+  <script src="vendor/bootstrap/js/validation.js"></script>
 </head>
 
 <body>
@@ -37,7 +39,8 @@ https://templatemo.com/tm-531-reflux
         <i class="fa fa-times" id="menu-close"></i>
         <div class="container">
           <div class="image">
-            <a href="#"><img src="assets/images/FB_IMG_102238559562609644.png" alt="" /></a>
+            <a href="#"><img src="assets/images/FB_IMG_102238559562609644.png"
+                alt="" /></a>
           </div>
           <div class="author-content">
             <h4>Gokulkrishna S</h4>
@@ -58,13 +61,16 @@ https://templatemo.com/tm-531-reflux
                     class="fa fa-facebook"></i></a>
               </li>
               <li>
-                <a href="https://twitter.com/go_adler" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://twitter.com/go_adler" target="_blank"><i
+                    class="fa fa-twitter"></i></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/gokul-krishna-9167b0141/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/gokul-krishna-9167b0141/"
+                  target="_blank"><i class="fa fa-linkedin"></i></a>
               </li>
               <li>
-                <a href="https://github.com/Go-Adler" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/Go-Adler" target="_blank"><i
+                    class="fa-brands fa-github"></i></a>
               </li>
               <!-- <li>
                 <a href="#"><i class="fa fa-rss"></i></a>
@@ -241,9 +247,9 @@ https://templatemo.com/tm-531-reflux
                   <figcaption>
                     <a href="assets/images/portfolio-02.jpg"
                       data-lightbox="image-1" data-title="Caption"><i
-                        class="fa fa-search"></i></a>   
+                        class="fa fa-search"></i></a>
                     <h4>Second Title</h4>
-                    <span>please tell your friends</span> 
+                    <span>please tell your friends</span>
                   </figcaption>
                 </figure>
               </div>
@@ -314,57 +320,59 @@ https://templatemo.com/tm-531-reflux
             efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
             sit amet, consectetur adipiscing elit.</span>
         </div>
-        <div class="row">
-          <div class="right-content">
-            <div class="container">
-              <form id="contact"
-                action="https://script.google.com/macros/s/AKfycbyD096ILjb_I0ABc0Nc9e8e1KWIvc0cjyXPV1X7H4GMV44uZAi_CqoQGCRVJxKXuZFT/exec"
-                method="post">
-                <div class="row">
-                  <div class="col-md-6">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control"
-                        id="name" placeholder="Your name..." required="" />
-                    </fieldset>
-                  </div>
-                  <div class="col-md-6">
-                    <fieldset>
-                      <input name="phone" type="number" class="form-control"
-                        id="email" placeholder="Your Phone" required="" />
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control"
-                        id="email" placeholder="Your email..." required="" />
-                    </fieldset>
-                  </div>
-                  
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input name="subject" type="text" class="form-control"
-                        id="subject" placeholder="Subject..." required="" />
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control"
-                        id="message" placeholder="Your message..."
-                        required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <button type="submit" id="newSubmit" class="button">
-                        Send Message
-                      </button>
-                    </fieldset>
-                  </div>
+        <form id="form" class=" d-flex flex-column align-items-center" action="https://script.google.com/macros/s/AKfycbyD096ILjb_I0ABc0Nc9e8e1KWIvc0cjyXPV1X7H4GMV44uZAi_CqoQGCRVJxKXuZFT/exec"
+        method="post" name="form">
+          <div class="row container-fluid">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="row container-fluid d-flex">
+                <div class="col-lg-6 col-12 mb-lg-0">
+                  <input type="text" placeholder="name" class="container-fluid form-control mb-3 form-item" id="name" onchange="validateName()">
+                  <p class="warning" id="nameWarning"></p>
                 </div>
-              </form>
+                <div class="col-lg-6 col-12 mb-2">
+                  <input type="text" placeholder="Number"  class="container-fluid form-control mb-2 form-item" id="number" onchange="validateNumber()"></div>
+                  <p class="warning" id="numberWarning"></p>
+              </div>
             </div>
           </div>
-        </div>
+          <div class="row container-fluid">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="row container-fluid">
+                <div class="col-12">
+                  <input id="email" onchange="validateEmail()" type="text" class="container-fluid mb-2 form-control mb-3 form-item" placeholder="Email">
+                  <p class="warning" id="emailWarning"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row container-fluid">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="row container-fluid">
+                <div class="col-12">
+                  <input type="text" class="container-fluid form-control mb-3 form-item" placeholder="Subject">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row container-fluid">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="row container-fluid">
+                <div class="col-12">
+                  <textarea name="" id="" cols="30" rows="5" class="container-fluid form-control mb-3 form-item" placeholder="Message"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row container-fluid">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="row container-fluid">
+                <div class="col-12">
+                  <button class="formButton">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </div>
@@ -378,6 +386,7 @@ https://templatemo.com/tm-531-reflux
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/lightbox.js"></script>
   <script src="assets/js/custom.js"></script>
+
   <script>
     //according to loftblog tut
     $(".main-menu li:first").addClass("active");
@@ -430,16 +439,16 @@ https://templatemo.com/tm-531-reflux
   </script>
   <script src="js/main.js"></script>
   <script>
-    $("#contact").submit((e) => {
+    $("#form").submit((e) => {
       e.preventDefault()
       $.ajax({
         url: "https://script.google.com/macros/s/AKfycbyD096ILjb_I0ABc0Nc9e8e1KWIvc0cjyXPV1X7H4GMV44uZAi_CqoQGCRVJxKXuZFT/exec",
-        data: $("#contact").serialize(),
+        data: $("#form").serialize(),
         method: "post",
         success: function (response) {
           alert("Form submitted successfully")
           window.location.reload()
-          window.location.href = "https://go-adler.github.io/New-Personal-Website/"
+          window.location.href = "#"
         },
         error: function (err) {
           alert("Something Error")
@@ -447,6 +456,8 @@ https://templatemo.com/tm-531-reflux
       })
     })
   </script>
+
+
 </body>
 
 </html>
